@@ -1,0 +1,41 @@
+var gulp = require('gulp');
+
+var browserify = require('browserify');
+var reactify = require('reactify');
+var source = require('vinyl-source-stream');
+var stylus = require('gulp-stylus');
+var streamify = require('gulp-streamify');
+
+
+// Get one .styl file and render
+gulp.task('stylus', function () {
+  return gulp.src('./public/stylesheets/stylus/style.styl')
+    .pipe(stylus())
+    .pipe(gulp.dest('./public/stylesheets/css'));
+});
+
+// Include css
+/*// Stylus has an awkward and perplexing 'include css' option
+gulp.task('include-css', function() {
+  return gulp.src('./public/libraries/*.styl')
+    .pipe(stylus({
+      'include css': true
+    }))
+    .pipe(gulp.dest('./public/stylesheets/css'));
+
+});
+*/
+gulp.task('js', function(){
+    browserify('./public/javascripts/src/app.jsx')
+        .transform(reactify)
+        .bundle()
+        .pipe(source('app.js'))
+        .pipe(gulp.dest('public/javascripts/build/'));
+});
+
+
+gulp.task('watch', function() {
+    gulp.watch("public/javascripts/src/**/*.jsx", ["js"])
+})
+
+gulp.task('default', ['js','watch', 'stylus']);

@@ -1,0 +1,36 @@
+
+mixin playground(name, height, noAlternate)
+  - var path = 'lib/' + name + '/demo'
+  - var css = (height) ? 'height: ' + height : ''
+  
+  .playground.js-playground(data-src!=path)
+    if !noAlternate
+      .playground-options
+        ul.nav.nav-pills
+          li.active
+            a(href="#", data-set-mode="light") Light
+          li
+            a(href="#", data-set-mode="dark") Dark
+    
+    .tab-content
+      .tab-pane.playground-canvas.active(id!=name + '-component', style!=css)
+        if block
+          block
+      .tab-pane.playground-code(data-lang="jade", id!=name + '-jade')
+        textarea.hide
+      .tab-pane.playground-code(data-lang="html", id!=name + '-html')
+        textarea.hide
+
+    ul.playground-actions
+      li.active
+        a(data-toggle='tab', href='#' + name + '-component')
+          | Component
+      li
+       a(data-toggle='tab', href='#' + name + '-html')  
+         | HTML
+      li
+        a(data-toggle='tab', href='#' + name + '-jade')
+          | Jade
+      li
+        a(href='/stage/#' + name)
+          | Open in stage

@@ -1,0 +1,121 @@
+#components(data-group="Components", data-budicon="690")
+
+  +header('Components', "/lib/logos/img/components.svg", "Set of components used across our website and apps.")
+
+  section.content-styleguide
+
+    section 
+      h2#alert Alert
+      p Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+      +playground('alerts', '')
+        include ../../lib/alerts/demo
+        
+    section 
+      h2#buttons Buttons
+      p 
+        | Use the button classes on an
+        code &lt;a&gt;
+        |,
+        code &lt;button&gt;
+        |, or 
+        code &lt;input&gt;
+        | element.
+    
+      +playground('buttons', '')
+        include ../../lib/buttons/demo
+                
+        
+    section 
+      h2#try-banner Try Banner
+      p The main call to action to signup.
+      +playground('try-banner', '')
+        include ../../lib/try-banner/demo
+    
+    section 
+      h2#jumbotron Jumbotron
+      p Use the <code>.has-header</code> modifier when used with the transparent header over it. 
+      +playground('jumbotron', '', true)
+        include ../../lib/jumbotron/demo
+  
+    section
+
+      h2#header Header
+      p We try to keep the header in all apps and websites that we do.
+
+      +playground('header', 110)
+        include ../../lib/header/demo
+
+    section
+
+      h2#footer Footer
+      p We try to keep the footer in all apps and websites that we do.
+
+      +playground('footer')
+        include ../../lib/footer/demo
+
+
+        
+    section
+
+      h2#modals Modals
+      p Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.
+      
+      +playground('modals', '', true)
+        include ../../lib/modals/demo
+        
+    section 
+      h2#tables Tables
+      p Use tables to represent tabulated data 
+      +playground('tables', '', true)
+        include ../../lib/tables/demo
+        
+    section
+
+      h2#navs Navs
+      p Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.
+
+      +playground('navs')
+        include ../../lib/navs/demo
+        
+    section
+    
+      h2#tabs Showcase tabs
+      p Used mostly on landing pages to showcase products or features.
+      
+      +playground('showcase-tabs')
+        include ../../lib/showcase-tabs/demo
+      
+    section 
+      h2#spinner Spinner
+      p 
+        | We use spinner after apply opacity to the main container between 
+        strong .3s
+        |  and
+        strong .7s
+        | . After that we show the spinner. 
+      +playground('spinner')
+        include ../../lib/spinner/demo
+        
+    section
+      h2#code-picker Code picker
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, mollitia.
+      +playground('code-picker', '', true)
+        include ../../lib/code-picker/demo
+              
+    section
+
+      h2#ui-switch UI Switch
+      p We designed it to quickly turn in/off features on Dashboard. 
+
+      +playground('ui-switch', '', true)
+        include ../../lib/ui-switch/demo
+          
+  
+    section
+
+      h2#switchboard Switchboard
+      p In order to enable and disable feature we suggest to use swichboard. 
+
+      +playground('switchboard', '', true)
+        include ../../lib/switchboard/demo

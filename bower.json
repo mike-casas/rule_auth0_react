@@ -1,0 +1,23 @@
+{
+  "name": "rule_auth0",
+  "description": "",
+  "main": "./bin/www",
+  "authors": [
+    "Miguel Casas <miguel@kommit.co>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private":true,
+  "dependencies": {
+      "auth0-styleguide": "auth0/styleguide"
+    },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libraries/",
+    "test",
+    "tests"
+  ]
+}

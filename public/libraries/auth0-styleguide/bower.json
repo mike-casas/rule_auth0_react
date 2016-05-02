@@ -1,0 +1,7 @@
+{
+  "name": "auth0-styleguide",
+  "version": "4.4.24",
+  "dependencies": {
+    "auth0-styleguide": "auth0/styleguide#^4.4.24"
+  }
+}

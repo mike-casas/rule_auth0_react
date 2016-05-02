@@ -1,0 +1,15 @@
+{
+  "name": "auth0-styleguide",
+  "version": "4.4.24",
+  "homepage": "https://github.com/auth0/styleguide",
+  "_release": "4.4.24",
+  "_resolution": {
+    "type": "version",
+    "tag": "4.4.24",
+    "commit": "349c4c702ee8b9b1e7aa99919fc3e140c800a664"
+  },
+  "_source": "git://github.com/auth0/styleguide.git",
+  "_target": "^4.4.24",
+  "_originalSource": "auth0/styleguide",
+  "_direct": true
+}
