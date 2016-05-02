@@ -26,7 +26,7 @@ gulp.task('include-css', function() {
 });
 */
 gulp.task('js', function(){
-    browserify('./public/javascripts/src/app.jsx')
+    browserify('./components/app.jsx')
         .transform(reactify)
         .bundle()
         .pipe(source('app.js'))
@@ -35,7 +35,7 @@ gulp.task('js', function(){
 
 
 gulp.task('watch', function() {
-    gulp.watch("public/javascripts/src/**/*.jsx", ["js"])
+    gulp.watch("./components/**/*.jsx", ["js"])
 })
 
 gulp.task('default', ['js','watch', 'stylus']);

@@ -16,7 +16,11 @@ router.use(function(req, res, next) {
 
 router.get('/rule/:ruleId', function(req, res) {
    RulesServices.all(req.params.ruleId, function(data){
-      sendJSONresponse(res,200, {rules:data});
+      if (data.length === 0){
+        sendJSONresponse(res,404, {"message":"Not Found"});
+      }else{
+        sendJSONresponse(res,200, {rules:data});
+      }
    });
 });
 
